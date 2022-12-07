@@ -1,0 +1,132 @@
+:root {
+    --title: #fffcf9;
+    --subtitle: #b3b3b3;
+    --bg-button: #e9e6e3;
+    --background: linear-gradient(43deg, #102d71 0%, #000000 52%, #c12a23 100%);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: var(--background);
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.movies-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.movies-header img{
+    width: 87px;
+    height: 62px;
+    position: absolute;
+    margin-top: -60px;
+}
+
+.movies-header h1{
+    margin-top: 7rem;
+    margin-bottom: 50px;
+    color: var(--title);
+}
+
+#movies-info{
+    color: var(--title);
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+#movie-poster{
+    width: 171px;
+    height: 243px;
+    margin-right: 34px;
+    display: none;
+}
+
+#movie-title{
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--title);
+    margin-bottom: 10px;
+}
+
+#movie-sinopse{
+    font-weight: 300;
+    font-size: 16px;
+    max-width: 423px;
+    color: var(--subtitle);
+    text-align: left;
+}
+
+.movies-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.movies-footer button{
+    width: 180px;
+    height: 47px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--bg-button);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 12px;
+    margin-bottom: 26px;
+}
+
+.movies-footer img{
+    padding-right: 7px;
+}
+
+.movies-footer p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    text-align: center;
+    color: var(--subtitle);
+}
+
+@media (max-width: 600px){
+
+    body{
+        height: 120vh;
+    }
+    .movies-header h1{
+        font-size: 1.5rem;
+    }
+    #movies-info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #movie-title{
+        display: flex;
+        justify-content: center;
+        margin: 15px 0px;
+    }
+    #movie-poster{
+        margin: 0px;
+    }
+    #movie-sinopse{
+        font-size: 1rem;
+        margin: 0px 15px;
+    }
+}
