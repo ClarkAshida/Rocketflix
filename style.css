@@ -13,53 +13,45 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-
 body{
     background: var(--background);
     background-repeat: no-repeat;
     height: 100vh;
 }
-
 .movies-header{
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 .movies-header img{
     width: 87px;
     height: 62px;
     position: absolute;
     margin-top: -60px;
 }
-
 .movies-header h1{
     margin-top: 7rem;
     margin-bottom: 50px;
     color: var(--title);
 }
-
 #movies-info{
     color: var(--title);
     margin-bottom: 30px;
     display: flex;
     justify-content: center;
 }
-
 #movie-poster{
     width: 171px;
     height: 243px;
     margin-right: 34px;
     display: none;
 }
-
 #movie-title{
     font-weight: 700;
     font-size: 20px;
     color: var(--title);
     margin-bottom: 10px;
 }
-
 #movie-sinopse{
     font-weight: 300;
     font-size: 16px;
@@ -67,14 +59,12 @@ body{
     color: var(--subtitle);
     text-align: left;
 }
-
 .movies-footer{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-
 .movies-footer button{
     width: 180px;
     height: 47px;
@@ -89,11 +79,9 @@ body{
     font-size: 12px;
     margin-bottom: 26px;
 }
-
 .movies-footer img{
     padding-right: 7px;
 }
-
 .movies-footer p{
     display: flex;
     justify-content: center;
@@ -102,9 +90,7 @@ body{
     text-align: center;
     color: var(--subtitle);
 }
-
 @media (max-width: 600px){
-
     body{
         height: 120vh;
     }
