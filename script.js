@@ -9,11 +9,13 @@ const movieImg = document.getElementById("movie-poster");
 const movieSinopse = document.getElementById("movie-sinopse");
 const movieBtn = document.getElementById("btn")
 
-movieBtn.addEventListener('click', async () => {
+movieBtn.addEventListener('click', generateRandom)
+
+async function generateRandom(){
     const randomId = randomNumber()
     const movie = await getMovie(randomId)
     renderMovie(movie)
-})
+}
   
 function randomNumber() {
     return Math.floor(Math.random() * 500);
@@ -26,13 +28,11 @@ async function getMovie(id) {
 }
   
 function renderMovie(movie) {
+    if(movie.poster_path === undefined){
+        generateRandom()
+    }
    movieImg.style.display = "block"
    movieImg.src = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
    movieTitle.textContent = movie.title;
    movieSinopse.textContent = movie.overview;
-
-   if(movie.poster_path === undefined){
-    movieTitle.textContent = "Filme indisponível";
-    movieSinopse.textContent = "Tente novamente";
-   }
 }
